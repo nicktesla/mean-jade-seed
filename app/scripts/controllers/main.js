@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cilantroApp').controller('MainCtrl', function($scope, $http, $resource) {
+angular.module('meanApp').controller('MainCtrl', function($scope, $http, $resource) {
 
   loadThings();
 
