@@ -1,0 +1,44 @@
+html
+  body
+    .header
+      ul.nav.nav-pills.pull-right
+        li.active
+          a(href='#') Home
+        li
+          a(href='#') Companies
+        li
+          a(href='#') Login
+      h3.text-muted Orange
+    .jumbotron
+      ul.nav.nav-pills(style='font-size: 12px;')
+        li
+          a(href='', ng-click='setTag("data")') Data
+        li
+          a(href='', ng-click='setTag("distributed")') Distributed Computing
+        li
+          a(href='', ng-click='setTag("front")') Front End Engineering
+        li
+          a(href='', ng-click='setTag("design")') Design
+        li
+          a(href='', ng-click='setTag("mobile")') Mobile
+      h1 Top {{currTag}} Companies in Silicon Valley
+      p.lead The best stats and hadoop nerds in the valley
+      // <p><a class="btn btn-lg btn-success" href="#">Awesome!</a></p>
+    .row.marketing
+      ul.nav.nav-pills(style='font-size: 12px;')
+        li
+          a(href='', ng-click='setContent("projects")') Projects
+        li
+          a(href='', ng-click='setContent("questions")') Questions
+        li
+          a(href='', ng-click='setContent("posts")') Posts
+        li
+          a(href='', ng-click='setContent("employees")') Top Employees
+      div(ng-repeat='thing in awesomeThings | filter:thingFilter')
+        h4
+          | {{thing.name}} | {{thing.awesomeness}}
+          span.glyphicon.glyphicon-star
+          | | ${{thing.pay}}
+        p {{thing.info}}
+    .footer
+      p ♥ from San Francisco
