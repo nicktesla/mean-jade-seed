@@ -15,7 +15,7 @@ npm install -g grunt-cli
 
 Clone this repo and cd into it
 ```
-git clone <REPO_URL> && cd cilantro
+git clone <REPO_URL> && cd mean-jade-seed
 ```
 
 ### Running the app
